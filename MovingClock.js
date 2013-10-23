@@ -65,7 +65,7 @@ function expansionminute()
   var rateOfGrowth = maxRadius * refreshInterval / millisInAnMinute;
   
   var circle3 = document.getElementById("circle3");
-  //console.log(circle3);
+  
   
   var circleRadius = circle3.getAttribute('r');
   
@@ -87,9 +87,8 @@ setInterval ( expansionminute, refreshInterval );
 
 
 //SECONDS CIRCLE
-var refreshInterval = 50;
 
-var millisInAnSecond = 1000;
+var millisInAnSecond = 100000;
 
 function expansionsecond() 
 {
@@ -99,7 +98,7 @@ function expansionsecond()
   
   var circle1 = document.getElementById("circle1");
   
-    var circleRadius = circle1.getAttribute('r');
+  var circleRadius = circle1.getAttribute('r');
   
   circleRadius = parseFloat(circleRadius);
   
