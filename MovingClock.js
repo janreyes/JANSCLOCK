@@ -31,7 +31,7 @@ function expansionhour()
   circleRadius = circleRadius + rateOfGrowth;
 
   // watch it slowly grow
-  console.log(circleRadius);
+  //console.log(circleRadius);
   
   // if the radius gets too big, make it 0
   if (circleRadius > maxRadius)
@@ -54,7 +54,7 @@ setInterval ( expansionhour, refreshInterval );
 
 
 //MINUTES CIRCLE
-var refreshInterval = 50;
+
 
 var millisInAnMinute = 1000*60;
 
@@ -65,12 +65,15 @@ function expansionminute()
   var rateOfGrowth = maxRadius * refreshInterval / millisInAnMinute;
   
   var circle3 = document.getElementById("circle3");
+  //console.log(circle3);
   
   var circleRadius = circle3.getAttribute('r');
   
+  circleRadius = parseFloat(circleRadius);
+  
   circleRadius = circleRadius + rateOfGrowth;
   
-  console.log(circleRadius);
+  //console.log(circleRadius);
   
 if (circleRadius > maxRadius)
   {
@@ -98,6 +101,8 @@ function expansionsecond()
   
     var circleRadius = circle1.getAttribute('r');
   
+  circleRadius = parseFloat(circleRadius);
+  
   circleRadius = circleRadius + rateOfGrowth;
   
   console.log(circleRadius);
@@ -107,8 +112,7 @@ if (circleRadius > maxRadius)
     circleRadius = 0;
   }
   
-  circle3.setAttribute('r', circleRadius);
+  circle1.setAttribute('r', circleRadius);
 }
   
-setInterval ( expansionsecond, refreshInterval );      
-  // JavaScript Document
+setInterval ( expansionsecond, refreshInterval );
